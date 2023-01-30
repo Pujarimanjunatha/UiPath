@@ -1,0 +1,101 @@
+﻿#,Name,Name Src,Name Alt Text,Name Url,Price,Price Url,1h %,24h %,7d %,Market Cap,Volume(24h),Volume(24h) Url,Circulating Supply,Last 7 Days,Last 7 Days Src,Last 7 Days Alt Text,Last 7 Days Url,Column-11
+1,"Bitcoin
+
+BTC",https://s2.coinmarketcap.com/static/img/coins/64x64/1.png,BTC logo,https://coinmarketcap.com/currencies/bitcoin/,"$23,700.11",https://coinmarketcap.com/currencies/bitcoin/markets/,0.16%,2.01%,4.25%,"$457,184,412,321","$25,697,303,623
+
+1,085,325 BTC",https://coinmarketcap.com/currencies/bitcoin/markets/,"19,276,756 BTC",,https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/1.svg,bitcoin-7d-price-graph,https://coinmarketcap.com/currencies/bitcoin/?period=7d,
+2,"Ethereum
+
+ETH",https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png,ETH logo,https://coinmarketcap.com/currencies/ethereum/,"$1,633.73",https://coinmarketcap.com/currencies/ethereum/markets/,0.36%,2.29%,0.01%,"$200,060,979,789","$7,984,555,992
+
+4,888,436 ETH",https://coinmarketcap.com/currencies/ethereum/markets/,"122,373,866 ETH",,https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/1027.svg,ethereum-7d-price-graph,https://coinmarketcap.com/currencies/ethereum/?period=7d,
+3,"Tether
+
+USDT",https://s2.coinmarketcap.com/static/img/coins/64x64/825.png,USDT logo,https://coinmarketcap.com/currencies/tether/,$1.00,https://coinmarketcap.com/currencies/tether/markets/,0.00%,0.02%,0.01%,"$67,783,425,349","$31,911,119,321
+
+31,907,441,639 USDT",https://coinmarketcap.com/currencies/tether/markets/,"67,776,034,768 USDT",,https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/825.svg,tether-7d-price-graph,https://coinmarketcap.com/currencies/tether/?period=7d,
+4,"BNB
+
+BNB",https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png,BNB logo,https://coinmarketcap.com/currencies/bnb/,$314.33,https://coinmarketcap.com/currencies/bnb/markets/,0.46%,2.00%,3.08%,"$49,684,693,358","$652,120,137
+
+2,074,637 BNB",https://coinmarketcap.com/currencies/bnb/markets/,"157,901,976 BNB",,https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/1839.svg,bnb-7d-price-graph,https://coinmarketcap.com/currencies/bnb/?period=7d,
+5,"USD Coin
+
+USDC",https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png,USDC logo,https://coinmarketcap.com/currencies/usd-coin/,$1.00,https://coinmarketcap.com/currencies/usd-coin/markets/,0.00%,0.00%,0.01%,"$43,089,761,941","$2,775,678,868
+
+2,775,597,042 USDC",https://coinmarketcap.com/currencies/usd-coin/markets/,"43,090,654,487 USDC",,https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/3408.svg,usd-coin-7d-price-graph,https://coinmarketcap.com/currencies/usd-coin/?period=7d,
+6,"XRP
+
+XRP",https://s2.coinmarketcap.com/static/img/coins/64x64/52.png,XRP logo,https://coinmarketcap.com/currencies/xrp/,$0.4122,https://coinmarketcap.com/currencies/xrp/markets/,0.59%,0.35%,1.47%,"$20,923,581,723","$745,899,322
+
+1,809,514,866 XRP",https://coinmarketcap.com/currencies/xrp/markets/,"50,803,611,248 XRP",,https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/52.svg,xrp-7d-price-graph,https://coinmarketcap.com/currencies/xrp/?period=7d,
+7,"Binance USD
+
+BUSD",https://s2.coinmarketcap.com/static/img/coins/64x64/4687.png,BUSD logo,https://coinmarketcap.com/currencies/binance-usd/,$1.00,https://coinmarketcap.com/currencies/binance-usd/markets/,0.05%,0.00%,0.01%,"$15,707,214,244","$9,298,326,632
+
+9,298,033,653 BUSD",https://coinmarketcap.com/currencies/binance-usd/markets/,"15,704,383,591 BUSD",,https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/4687.svg,binance-usd-7d-price-graph,https://coinmarketcap.com/currencies/binance-usd/?period=7d,
+8,"Cardano
+
+ADA",https://s2.coinmarketcap.com/static/img/coins/64x64/2010.png,ADA logo,https://coinmarketcap.com/currencies/cardano/,$0.3917,https://coinmarketcap.com/currencies/cardano/markets/,0.26%,1.31%,5.28%,"$13,551,235,990","$314,916,243
+
+805,108,268 ADA",https://coinmarketcap.com/currencies/cardano/markets/,"34,593,779,088 ADA",,https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/2010.svg,cardano-7d-price-graph,https://coinmarketcap.com/currencies/cardano/?period=7d,
+9,"Dogecoin
+
+DOGE",https://s2.coinmarketcap.com/static/img/coins/64x64/74.png,DOGE logo,https://coinmarketcap.com/currencies/dogecoin/,$0.08909,https://coinmarketcap.com/currencies/dogecoin/markets/,0.35%,0.40%,1.05%,"$11,819,966,646","$455,856,312
+
+5,119,661,516 DOGE",https://coinmarketcap.com/currencies/dogecoin/markets/,"132,670,764,300 DOGE",,https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/74.svg,dogecoin-7d-price-graph,https://coinmarketcap.com/currencies/dogecoin/?period=7d,
+10,"Polygon
+
+MATIC",https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png,MATIC logo,https://coinmarketcap.com/currencies/polygon/,$1.16,https://coinmarketcap.com/currencies/polygon/markets/,0.08%,0.94%,15.65%,"$10,115,706,265","$586,643,581
+
+508,070,176 MATIC",https://coinmarketcap.com/currencies/polygon/markets/,"8,734,317,475 MATIC",,https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/3890.svg,polygon-7d-price-graph,https://coinmarketcap.com/currencies/polygon/?period=7d,
+11,"Solana
+
+SOL",https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png,SOL logo,https://coinmarketcap.com/currencies/solana/,$25.53,https://coinmarketcap.com/currencies/solana/markets/,0.36%,5.87%,4.06%,"$9,488,639,283","$1,188,035,351
+
+46,766,152 SOL",https://coinmarketcap.com/currencies/solana/markets/,"371,657,946 SOL",,https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/5426.svg,solana-7d-price-graph,https://coinmarketcap.com/currencies/solana/?period=7d,
+12,"Polkadot
+
+DOT",https://s2.coinmarketcap.com/static/img/coins/64x64/6636.png,DOT logo,https://coinmarketcap.com/currencies/polkadot-new/,$6.54,https://coinmarketcap.com/currencies/polkadot-new/markets/,0.36%,0.62%,3.84%,"$7,537,893,582","$218,724,766
+
+33,460,793 DOT",https://coinmarketcap.com/currencies/polkadot-new/markets/,"1,151,778,076 DOT",,https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/6636.svg,polkadot-new-7d-price-graph,https://coinmarketcap.com/currencies/polkadot-new/?period=7d,
+13,"Litecoin
+
+LTC",https://s2.coinmarketcap.com/static/img/coins/64x64/2.png,LTC logo,https://coinmarketcap.com/currencies/litecoin/,$94.82,https://coinmarketcap.com/currencies/litecoin/markets/,0.35%,0.24%,7.60%,"$6,842,893,099","$761,012,716
+
+8,034,992 LTC",https://coinmarketcap.com/currencies/litecoin/markets/,"72,167,228 LTC",,https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/2.svg,litecoin-7d-price-graph,https://coinmarketcap.com/currencies/litecoin/?period=7d,
+14,"Shiba Inu
+
+SHIB",https://s2.coinmarketcap.com/static/img/coins/64x64/5994.png,SHIB logo,https://coinmarketcap.com/currencies/shiba-inu/,$0.00001207,https://coinmarketcap.com/currencies/shiba-inu/markets/,0.10%,1.28%,0.07%,"$6,629,866,813","$216,112,079
+
+17,976,051,350,794 SHIB",https://coinmarketcap.com/currencies/shiba-inu/markets/,"549,063,278,876,302 SHIB",,https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/5994.svg,shiba-inu-7d-price-graph,https://coinmarketcap.com/currencies/shiba-inu/?period=7d,
+15,"Avalanche
+
+AVAX",https://s2.coinmarketcap.com/static/img/coins/64x64/5805.png,AVAX logo,https://coinmarketcap.com/currencies/avalanche/,$20.68,https://coinmarketcap.com/currencies/avalanche/markets/,0.03%,0.44%,16.28%,"$6,511,525,688","$401,450,272
+
+19,456,861 AVAX",https://coinmarketcap.com/currencies/avalanche/markets/,"314,803,093 AVAX",,https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/5805.svg,avalanche-7d-price-graph,https://coinmarketcap.com/currencies/avalanche/?period=7d,
+16,"Dai
+
+DAI",https://s2.coinmarketcap.com/static/img/coins/64x64/4943.png,DAI logo,https://coinmarketcap.com/currencies/multi-collateral-dai/,$0.9996,https://coinmarketcap.com/currencies/multi-collateral-dai/markets/,0.03%,0.06%,0.00%,"$5,825,148,328","$145,487,243
+
+145,598,218 DAI",https://coinmarketcap.com/currencies/multi-collateral-dai/markets/,"5,827,538,297 DAI",,https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/4943.svg,multi-collateral-dai-7d-price-graph,https://coinmarketcap.com/currencies/multi-collateral-dai/?period=7d,
+17,"TRON
+
+TRX",https://s2.coinmarketcap.com/static/img/coins/64x64/1958.png,TRX logo,https://coinmarketcap.com/currencies/tron/,$0.06341,https://coinmarketcap.com/currencies/tron/markets/,0.09%,0.13%,2.60%,"$5,822,465,729","$305,028,569
+
+4,819,773,520 TRX",https://coinmarketcap.com/currencies/tron/markets/,"91,820,462,417 TRX",,https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/1958.svg,tron-7d-price-graph,https://coinmarketcap.com/currencies/tron/?period=7d,
+18,"Uniswap
+
+UNI",https://s2.coinmarketcap.com/static/img/coins/64x64/7083.png,UNI logo,https://coinmarketcap.com/currencies/uniswap/,$6.87,https://coinmarketcap.com/currencies/uniswap/markets/,0.22%,0.84%,0.21%,"$5,234,820,559","$105,378,058
+
+15,374,513 UNI",https://coinmarketcap.com/currencies/uniswap/markets/,"762,209,327 UNI",,https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/7083.svg,uniswap-7d-price-graph,https://coinmarketcap.com/currencies/uniswap/?period=7d,
+19,"Wrapped Bitcoin
+
+WBTC",https://s2.coinmarketcap.com/static/img/coins/64x64/3717.png,WBTC logo,https://coinmarketcap.com/currencies/wrapped-bitcoin/,"$23,657.16",https://coinmarketcap.com/currencies/wrapped-bitcoin/markets/,0.03%,1.94%,4.27%,"$4,178,981,401","$124,328,683
+
+5,260 WBTC",https://coinmarketcap.com/currencies/wrapped-bitcoin/markets/,"176,648 WBTC",,https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/3717.svg,wrapped-bitcoin-7d-price-graph,https://coinmarketcap.com/currencies/wrapped-bitcoin/?period=7d,
+20,"Cosmos
+
+ATOM",https://s2.coinmarketcap.com/static/img/coins/64x64/3794.png,ATOM logo,https://coinmarketcap.com/currencies/cosmos/,$13.70,https://coinmarketcap.com/currencies/cosmos/markets/,0.36%,2.85%,2.83%,"$3,922,379,347","$198,766,127
+
+14,544,040 ATOM",https://coinmarketcap.com/currencies/cosmos/markets/,"286,370,297 ATOM",,https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/3794.svg,cosmos-7d-price-graph,https://coinmarketcap.com/currencies/cosmos/?period=7d,
