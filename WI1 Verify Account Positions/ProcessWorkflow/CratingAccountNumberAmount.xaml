@@ -1,0 +1,209 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="CratingAccountNumberAmount" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_TransactionItem" Type="InArgument(sd:DataRow)" />
+    <x:Property Name="out_Int_Account_Number" Type="OutArgument(x:String)" />
+    <x:Property Name="out_Int_Account_Amount" Type="OutArgument(x:String)" />
+    <x:Property Name="Out_Currency" Type="OutArgument(x:String)" />
+    <x:Property Name="out_Int_ClientID" Type="OutArgument(x:String)" />
+    <x:Property Name="Site_Url" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:CratingAccountNumberAmount.Site_Url>
+    <InArgument x:TypeArguments="x:String" />
+  </this:CratingAccountNumberAmount.Site_Url>
+  <sap:VirtualizedContainerService.HintSize>648,2010</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="54">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="55">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualStudio.Services.Common</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="654,1945" sap2010:WorkflowViewState.IdRef="Sequence_13">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ACME System 1 - Work Items" sap:VirtualizedContainerService.HintSize="592,1834" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="9c64d00c-89e9-4e34-b1f4-b623b9778bbe" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="558,1617" sap2010:WorkflowViewState.IdRef="Sequence_15">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="496,82" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="[Site_Url+in_TransactionItem(&quot;WIID&quot;).ToString]" Version="V3" />
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,1380" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="Str_Account_Info" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NGetText DisplayName="Get Text 'Account Information'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="9c64d00c-89e9-4e34-b1f4-b623b9778bbe" TextString="[Str_Account_Info]" Version="V3">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/work-items/89922794" DesignTimeRectangle="214, 411, 373, 80" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Client ID:'" FullSelectorArgument="&lt;webctrl tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' type='' class='' aaname='                          EU67601                          363657                          1009712 EUR                                              ' /&gt;" Guid="3b2824cc-541a-4670-9fa8-de8274d2ff5e" InformativeScreenshot="dae7bc7ff10b79854b2e4cd31d54e255.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Work Items' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="214, 382, 373, 20" ElementType="Text" FriendlyName="'Account Information'" FullSelectorArgument="&lt;webctrl tag='H4' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H4' type='' class='' aaname='Account Information Details' check:innerText='Account Information Details' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NGetText.Target>
+              </uix:NGetText>
+              <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_4">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[out_Int_ClientID]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(Str_Account_Info,"(?&lt;=Client ID:)\s\D{2}\d{5}").ToString.Trim]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[out_Int_ClientID]" />
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,171" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:Matches BuilderPattern="Client ID: (.{7})" DisplayName="Matches Client ID" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="Matches_1" Input="[Str_Account_Info]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;LIT&quot;,&quot;OperationName&quot;:&quot;Literal&quot;,&quot;OperationValue&quot;:&quot;Client ID: &quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null},{&quot;Index&quot;:1,&quot;OperationID&quot;:&quot;ANYTHING&quot;,&quot;OperationName&quot;:&quot;Anything&quot;,&quot;OperationValue&quot;:&quot;.&quot;,&quot;QuantifierFirstValue&quot;:&quot;7&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="Client ID: (.{7})" RegexOption="IgnoreCase, Compiled" Result="[ClientID]" />
+                  </Sequence>
+                </ui:CommentOut.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:CommentOut>
+              <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_5">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[out_Int_Account_Number]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(Str_Account_Info,"(?&lt;=Account Number:)\s\d{6}").ToString.Trim]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[out_Int_Account_Number]" />
+              <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_6">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[out_Int_Account_Amount]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(Str_Account_Info,"(?&lt;=Account Amount:)\s?\D\d+").ToString.Trim]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[out_Int_Account_Amount]" />
+              <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_7">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[Out_Currency]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[Str_Account_Info.Substring(Str_Account_Info.Length-3).ToString]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[Out_Currency]" />
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAReSURBVFhHvZdtbFNlFMcf3SxUfI0miLAEWdShCV+EGD9oUJBJAobwQb8IGklkKEQkcy8MZK90tGsnZbxsvkDmxsYkS8QFPhDYLIy+sbv2rhW3dYPFbGyVbYwJJMu2wzm3Prd317ZCc+uHf9vnPC/n13PPc57nMrZX6EPdQo39zyKf1wgAZJWQ2sJtzYVrkw+lDT9G5UbBZWB5TmC7XIlRHgnXJ4hSyecwAYwxAzawM/1EoKFSvLEh97eBjOw4xedmNg9k7LSFRO2sloEMg2Po0x3n+4tYMUaiUIr0SAiAiL5xwfrGqyvSt69hiZZuXzv6cwP+cQVAoRveqQtsizRBS33vHV6cTAD5agA0rG7o+SLSpHg0ODG9aGlFR+vy+kCl0l4p3HgpKkC6RgAA8GxSqQfY5zZgm22wq3XwFO+zOIeiA6z5OQyQctBXpTd6BdwZwrsNPVZuV2vJD3/YWOFl9xNmr5hULGwiW8v1OxvZpmZg5SKw7a2Y8e3Ax5c5g9EB1p4MA+hNnjssH7dlth2WHusMcrta8yt8wHLswIpwbEHbUW5P/e4KsK0XJDX2jBVw+30DPGkR7awIt8pOJ7xR03WO29VadNg/Ke1tLDJPfyvuUfbtbu5fn+MIvqK0HYmVAzMAzKJTAdCsXEQpBJimMQQwx+TNjzRm6PbUQ/x3lWc4cQC60nYZYOEhP+jxsTxqbAfMp3JurxZHNAY44p/iAHpFBB63eIF9jbmBJVhn9Bi5vdanPYAcASUA/mtgu7H24+H2nLVDttdoDZAaBWAB7Q4CwLo/d38cAE9Z7hsg4iOIC+B9BcDsfR6XdGrhFltW3XWe29VKq/JPSAAGHFsiyPs9LgBlJcQk8mGFA5ZlhxX1gTPcrlbKobCjOWavidvjAnjreEAG+Ph03yn21SVgmZfg9druAW5XK9mI2Y5HOct2gFUIbuH25w/EAfBmTRjgqH9ks1RK6VDBx9B5a+IF3sc1DbCE5TqoBEvb7drfE/N431xrx4MDrKwPA5D0Zeg8FxehwXvckHfh+icmVzCt7vfRxTkt/VmMzopinLv1IrxW03VTOTdaBKpjAbynOo6b/hzfwj46hxmO/ZQPGGZdGYac2plYZOgOSU4+s8HoFKxSzk2hHKBHg3VgntUnnxExI6AGIH3Y1NfGdmAufInHKk2ik48umBgRsusK3LDhbL9c6biYAZ1suyglMUbpILfX+R8QgNTUO77sg8beX58xeuAxrO3JeL7Pt4jjG3+5+lPf3UldpDlvH+++mXqgY/LlSj8srw1kcfsxMcZhFA1ASx0WYgDglSzhl9IfPcNpUQHwUro20iStNQsf47+v5ZjN6072lpy4Mrqw3BV81eSYKSPKjCq1D0ptc4Qx/6UK4a8XjY6hdcmUoJi86FsCCL2aIUQSdszGRHsYvylMWusRFNuLotoReh2UXs1CDXpXo9cl2l5ElwjxtblPEn50o0ZQQUmGf74ToZlro0+h8x4tMHhuvyezngAAAABJRU5ErkJggg==" InformativeScreenshot="cf39a1a92736e9c22a4303e3782917bb.jpg" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Work Items' /&gt;" Url="[Site_Url]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
