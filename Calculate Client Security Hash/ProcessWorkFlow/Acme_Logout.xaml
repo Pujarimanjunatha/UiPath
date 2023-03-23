@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Acme_Logout" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="536,1033" sap2010:WorkflowViewState.IdRef="Acme_Logout_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Acme_Logout" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="648,1035" sap2010:WorkflowViewState.IdRef="Acme_Logout_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -75,19 +75,19 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Acme_Logout" sap:VirtualizedContainerService.HintSize="546,968" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Acme_Logout" sap:VirtualizedContainerService.HintSize="546,1142" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ACME System 1 - Work Items" sap:VirtualizedContainerService.HintSize="484,857" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="a128412e-8697-4aba-9dc7-a922dcc7f40e" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ACME System 1 - Work Items" sap:VirtualizedContainerService.HintSize="484,1031" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="a128412e-8697-4aba-9dc7-a922dcc7f40e" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,640" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do log out process" sap:VirtualizedContainerService.HintSize="450,774" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -97,7 +97,7 @@
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/work-items?page=8" DesignTimeRectangle="1188, 79, 80, 50" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Log Out'" FullSelectorArgument="&lt;webctrl aaname='Log Out' parentid='bs-example-navbar-collapse-1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Log Out' parentid='bs-example-navbar-collapse-1' tag='A' type='' class='' check:innerText='Log Out' /&gt;" Guid="a684e9c1-51c0-4150-9b19-c726b23c30d1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFQAAAA2CAYAAABZV76QAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGzSURBVHhe7ZzRkYMgFEX9tA7LMF2YJrSHWILpwI42Nb2Vh7DAEjJm7u5I5jJzPuQBgcMD/UojLNDSfD0eQnA0XdcJwUGhYCgUDIWCoVAwFAqGQsFQKBgKBUOhYCgUDIWCoVAwFAqGQsFQKBgKBUOhYCgUDIWCAQkdZF4XmS652F/Ry3RfZV0DbkOmXYHrLOt9kj4Xe5M6hV4mWTICh5sRO8sQ1BWpWqiZvM+mtG2cbfNohD0bz7Zdxj4T26U60So+HsfHo/kc2IQX/I9QnXwQT551kT5TnNwn42Uk/Y7vgkpCzXOdGZrPqJ+FZfqmGxCisVJGBeN9plAT247xNa7vx8UuLMwoRykLKRQstBTzcR75uK9m4bHxHJGwzxS6kQpKnnWRfmEvXkoGFRWI2dFxomy3p8PLT/udW6hZTEoqMVOvOIkW+9lUuicNcR8lEayEv7vJG9xVo3E378LmHQQkFEx4D1bGCYTaLAlfWtE9VxnnyNDoOqhXpuGcR75iKBQMhYKhUDAUCoZCwVAoGAoFQ6FgKBQMhYKhUDAUCoZCwVAoGAoFQ6FgmrZtheDgn7hAi8g3AcPTtOPOaoMAAAAASUVORK5CYII=" InformativeScreenshot="6a01a10c66a7af568426115c6cbf0c8f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Work Items' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="1029, 79, 159, 50" ElementType="Text" FriendlyName="'Switch to new theme'" FullSelectorArgument="&lt;webctrl aaname='Switch to new theme' parentid='bs-example-navbar-collapse-1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Switch to new theme' parentid='bs-example-navbar-collapse-1' tag='A' type='' class='' check:innerText='Switch to new theme' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKMAAAA2CAYAAACrxylwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANmSURBVHhe7ZtRcusgDEX9mXVkrZ3sJdN9OD/tCpxNeAXUgABJEIIbZ6rOXM2ceY8ANpKO3fSjk0MgjMT09f3tALDAdD6fHQAWgIzADJARmAEyAjNARmAGyAjMABmBGSAjMANkBGaAjMAMkBGYATICM0BGYAbICMwAGYEZICMwA2QEZoCMwAyQEZgBMgIzHCfjx+xW+iuvFMtnY91Trm7Jey9u3i46dh2+b4DPbfU6u0trziw+x9XNHzQONWfjf84xMraKQnKut4tcuwvIKIGMT7ncNmMajS2f16Jc79sH92tZ7wsr1kYRUxSp43yOfA3ad+ezi7um63O8iDnYGvF5v8n+/OttFmeRD4I8f6nPnlqUNTrvsJ9kXO68UGqfyKm+73q7snPGnMN5KOTL5FFOx3DMm5ESls2QxMSVUCwZL26c583Sb8Y4LtfhY31NKhxvMke/GUMOTEA9VsSGlfnw4G0niGLrc0rhxmsRxwW/lp2JfvroBzLvDTmwh029SXUOcfxofz+nIzjsO2NsBgv91PDmhyd/ccuaCuETTf/vyKiLK+D7IuXNzNcR/DyNQnt6xa7meKPFtRNMpOFaaFoyyrXlXKp2RKgJnbvKoarvgzO35sXnv+O4X2AYIUmK3OBQuJhoevL9ulCs0JCUKJdKFrQrl9gXGZex3uvhjdP0ZAz7mkGNG66FRjWf3TOtKeeKOTWjJ6O4d7nf05zynt/zFhkz4kkrYuXC+3lfjO3f8lbiYvxjGR+e0zNaC02RI4wHZNQ5cXbL2M3pdQ6QMRa2WUBVLJ9Q/NJPgtJbYN6+gJeC8iJKGUOx0t6KuvjjMrZzqJrVm+O5ds8ZGauFZo+Mnb4Qe2QcyelV3voLTDNZHznhKFBdgHQtJWOjwOUer8hIY95YPVZ0ZaRz1rmzZg7VQsPk8OOujNu4ykHWb5eMIzm9yHE/pkNhZNRPZSx4Wya5JkkVhPKR11DTUqhmDsuYr8OalQQJIZus6cvoUefcRrJpcb5fi5qwJu17JuNGrh9F935dGdOYx7Fvyvd+ZwRgB5ARmAEyAjNARmAGyAjMABmBGSAjMANkBGaAjMAMkBGYATICM0BGYAbICMwAGYEZICMwA2QEZoCMwAyQEZgBMgIzQEZghul0OjkALDDRn3khEH8czv0A6K//Rg2DRM4AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -108,14 +108,15 @@
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="1328, 8, 46, 29" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Close'" FullSelectorArgument="&lt;ctrl name='ACME System 1 - Work Items - Google Chrome' role='pane' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='ACME System 1 - Work Items - Google Chrome' role='pane' /&gt;&lt;ctrl name='Close' role='push button' automationid='' check:text='Close' /&gt;" Guid="6614aaea-c4ce-43e5-a5ee-a1edde91a915" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADIAAAAhCAYAAACbffiEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACpSURBVFhH7c8xCoNAEIXhOYfm/qWQznOkiEXAxoNseJAFi0Gzyz6ZlbfwozBTzGd60V7q/P0YZuv7ldD2WbpLkGgJEi1BoiXIPz3GIc3PyZ0hzLDjzUqjQvKhHuZoVhMVgryDWyMQHYL2hzMQ6BIIygAGAglSUkbgu//3dmujQ7zDGRgq5Ojg1hgq5OzQjPFmpVEhVyZItASJliDREiRa94R4C710Q4jZF9b0rMXjUAz2AAAAAElFTkSuQmCC" InformativeScreenshot="19bbbe9b023f91eab063bafd4652e315.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Work Items - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="1282, 8, 46, 29" ElementType="Button" FriendlyName="'Restore'" FullSelectorArgument="&lt;ctrl name='ACME System 1 - Work Items - Google Chrome' role='pane' /&gt;&lt;ctrl name='Restore' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='ACME System 1 - Work Items - Google Chrome' role='pane' /&gt;&lt;ctrl name='Restore' role='push button' automationid='' check:text='Restore' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADIAAAAhCAYAAACbffiEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACGSURBVFhH7dXBCoAgEIRh3//xOuQh6NKDGB4WIgaLFW20Wfgu1kK/l4KGbdIkE44tJrOvy3Ds2xXCQiFsFMJGIW/lf20J2vHoEoLOsyFCrreO2Dv3Pa+mIeg8U0iBQp78JsSg5x6fhaDzGk1DStBOjWYhvSmEjULYKISNQtjMHTKySUJiOgHqMwRClk5OngAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
-            <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="388,133" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="Chrome.exe" />
+            <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process(Chrome)" sap:VirtualizedContainerService.HintSize="388,133" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="Chrome.exe" />
+            <ui:LogMessage DisplayName="Log Message Log out Sucessful" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;ACME log out Successful&quot;]" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>

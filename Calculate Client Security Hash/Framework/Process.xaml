@@ -91,8 +91,8 @@
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="450,977" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="ShaCode" />
       <Variable x:TypeArguments="x:String" Name="Result" />
+      <Variable x:TypeArguments="x:String" Name="HashCode" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -103,16 +103,28 @@
     <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ProcessWorkFlow\ClientDetails.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ProcessWorkFlow\ClientDetails.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_WIID">[in_TransactionItem("WIID").ToString]</InArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="Out_ShaCode">[ShaCode]</OutArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_ACME_WIID_URL">[in_Config("ACME WIID URL").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_WIID">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_TransactionItem(&quot;WIID&quot;).ToString" />
+        </InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_Result">
+          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="Result" />
+        </OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Acmeurl">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;ACME URL&quot;).ToString" />
+        </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ProcessWorkFlow\Sha1Website.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="ProcessWorkFlow\Sha1Website.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="In_Sha1Code">[ShaCode]</InArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="Out_Result">[Result]</OutArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="Sha1Url">[in_Config("Sha1Url").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Shaonecode">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Result" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Shaoneurl">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;ACME URL&quot;).ToString" />
+        </InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_Hashcode">
+          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="HashCode" />
+        </OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ProcessWorkFlow\UpdatingItems.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="ProcessWorkFlow\UpdatingItems.xaml">
@@ -120,15 +132,15 @@
         <InArgument x:TypeArguments="x:String" x:Key="in_WIID">
           <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_TransactionItem(&quot;WIID&quot;).ToString" />
         </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="In_ShaCode">
-          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Result" />
+        <InArgument x:TypeArguments="x:String" x:Key="in_Shaonecode">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="HashCode" />
         </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_ACME_WIID_URL">
-          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;ACME WIID URL&quot;).ToString" />
+        <InArgument x:TypeArguments="x:String" x:Key="in_Acmeurl">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;ACME URL&quot;).ToString" />
         </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[Result]" />
+    <ui:LogMessage DisplayName="Log Message Result" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[Result]" />
     <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="388,56" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
   </Sequence>
 </Activity>

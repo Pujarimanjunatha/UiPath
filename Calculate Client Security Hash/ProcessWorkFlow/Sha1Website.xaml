@@ -1,19 +1,19 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Sha1Website" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Sha1Website" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="In_Sha1Code" Type="InArgument(x:String)" />
-    <x:Property Name="Out_Result" Type="OutArgument(x:String)" />
-    <x:Property Name="Sha1Url" Type="InArgument(x:String)" />
+    <x:Property Name="in_Shaonecode" Type="InArgument(x:String)" />
+    <x:Property Name="in_Shaoneurl" Type="InArgument(x:String)" />
+    <x:Property Name="out_Hashcode" Type="OutArgument(x:String)" />
   </x:Members>
-  <this:Sha1Website.In_Sha1Code>
+  <this:Sha1Website.in_Shaonecode>
     <InArgument x:TypeArguments="x:String" />
-  </this:Sha1Website.In_Sha1Code>
-  <this:Sha1Website.Sha1Url>
+  </this:Sha1Website.in_Shaonecode>
+  <this:Sha1Website.in_Shaoneurl>
     <InArgument x:TypeArguments="x:String" />
-  </this:Sha1Website.Sha1Url>
+  </this:Sha1Website.in_Shaoneurl>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>648,1120</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>536,1252</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Sha1Website_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -95,27 +95,29 @@
       <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sha1Website" sap:VirtualizedContainerService.HintSize="546,1055" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Sha1Website" sap:VirtualizedContainerService.HintSize="546,1187" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: SHA1 online" sap:VirtualizedContainerService.HintSize="484,944" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="626dc3a9-f41a-4fdf-8bb1-7ea2dde40ac3" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: SHA1 online" sap:VirtualizedContainerService.HintSize="484,1076" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="626dc3a9-f41a-4fdf-8bb1-7ea2dde40ac3" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,727" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,859" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT textToHashId'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="626dc3a9-f41a-4fdf-8bb1-7ea2dde40ac3" Text="[In_Sha1Code + &quot;[k(Enter)]&quot;]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT textToHashId'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="626dc3a9-f41a-4fdf-8bb1-7ea2dde40ac3" Text="[in_Shaonecode + &quot;[k(Enter)]&quot;]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="http://www.sha1-online.com/" DesignTimeRectangle="501, 260, 333, 21" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT textToHashId'" FullSelectorArgument="&lt;webctrl id='textToHashId' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='textToHashId' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="7955dcc7-1804-454d-8d73-c028508d134a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVEAAAAZCAYAAACICh33AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACoSURBVHhe7dSxDYMwAERRr0LLKrhkFm/FaFkhjqCAigh87TvpdVf/0s3MbHgiamYW7IzoNE0APLAsS1/X9SCiAC/sAW2t3Uf0+9kAuLEHVEQBBokoQEBEAQIiChAQUYCAiAIERBQgIKIAAREFCIgoQEBEAQIiChAQUYCAiAIERBQgIKIAgb8RrbWeBwDu7QGd5/mKqIACPHcEtJQromZm9n4iamY2vN5/5qyxJOou/TQAAAAASUVORK5CYII=" InformativeScreenshot="64066c3939e06dd1c37ca7749e923edb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SHA1 online' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -126,17 +128,18 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NGetText DisplayName="Get Text 'e25baa57b6035bad140ca6d…'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="626dc3a9-f41a-4fdf-8bb1-7ea2dde40ac3" TextString="[Out_Result]" Version="V3">
+            <uix:NGetText DisplayName="Get Text 'e25baa57b6035bad140ca6d…'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="626dc3a9-f41a-4fdf-8bb1-7ea2dde40ac3" TextString="[out_Hashcode]" Version="V3">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="http://www.sha1-online.com/" DesignTimeRectangle="525, 339, 485, 22" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'e25baa57b6035bad140ca6d…'" FullSelectorArgument="&lt;webctrl id='result-sha1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='result-sha1' tag='SPAN' type='' class='' /&gt;" Guid="137f5c79-6892-4b11-ab46-bf57f3f359fa" InformativeScreenshot="f17f619556237d0630a74ff930800da4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SHA1 online' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="638, 303, 90, 19" ElementType="DropDown" FriendlyName="'sha-1'" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' type='' class='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF4AAAAXCAYAAACChfjKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF5SURBVGhD7dZdjoMgFIZhd2TXQtKteKtp3Ipdil1IL7x0CWf4BORnLNIES23Om5AMMmMyD1RbEVckhi+UB980DY8Dh9sKHy5w+XONGf6DMXyhMsBPNFwrEvdJz/M13o657zf0tfBAryqGj5QbfqReglfXnvqDPkm5a9uW5nnWMxuudV2nZ37p8M+BBED06B/6+go/KLBl9JLPZk6vGoKGp17YbKRxufdxj7CcAR3/1+Vy8fDxM65hDb8TlgwPhBV72QSDq4Astp7fNP2jl6d3kFdVyyaYtWjngAdwXdcevouONXdDTG/Bu4C2/0CvcYNNiXYOeBTi76GjZPgVTd5wGesm7MB7jyhBwoGf7sLeL3g8nQkeufgYMXT0BrybegEqlDh8ePp/7VHjZvD30FEyPKDDF6qaJ8CbT4c5/T8KjwC+h47ST3zwrcbixeG9v5MbMOLxsvmuCDsnfGrp8FzWGL5QDF8ohi/UJjzCAo/jhpsHz30uhi8S0R8PrzQ2bkHhaAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NGetText.Target>
             </uix:NGetText>
+            <ui:LogMessage DisplayName="Log Message Out_Result" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[out_Hashcode]" />
             <uix:NClick ClickType="Single" DisplayName="Click 'Close'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="626dc3a9-f41a-4fdf-8bb1-7ea2dde40ac3" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="1312, 1, 46, 29" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Close'" FullSelectorArgument="&lt;ctrl name='SHA1 online - Google Chrome' role='pane' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='SHA1 online - Google Chrome' role='pane' /&gt;&lt;ctrl name='Close' role='push button' automationid='' check:text='Close' /&gt;" Guid="d58daced-7768-42d0-8e34-46caf505e393" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADIAAAAgCAYAAABQISshAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACkSURBVFhH7c9BCoMwFIThnEN7OhGPJ3TXm3Th0oOkzCIg5WFVHsNYJvCTwMvifWUah3q3cMr3WZd3vVuGqGWIWoaoZYhaFMij7+rrOYczhBn+RLOjUSBt0QizNzsTBYKihbMQiAZB28UzEYgKQQ2QiUCGXKkhcG/f0d+z0SDR4pkYCmRv4SwMBfJr0YaJZkejQBgZopYhahmiliFqGaLWH0NK+QAa9SSoqCX5nAAAAABJRU5ErkJggg==" InformativeScreenshot="d3605824c4c84108797381e63bec1c2f.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='SHA1 online - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
@@ -152,7 +155,7 @@
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABmSURBVDhPrczRDYAgDIRhH5nAFdx/B1zGJTBHcqY2FNrqw5ejCfm369wblaOG9QAevwWwJD9ahgG5K8sAlnBrroBcLRzAEu5UQO6nAKQDFAoQbnIHLNMA8fOIGfB6BUh/mnkCObXdA5Q5fU2oWVYAAAAASUVORK5CYII=" InformativeScreenshot="854d979571081bcd76890134d3666f6e.jpg" Selector="&lt;html app='chrome.exe' title='SHA1 online' /&gt;" Url="[Sha1Url]" />
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABmSURBVDhPrczRDYAgDIRhH5nAFdx/B1zGJTBHcqY2FNrqw5ejCfm369wblaOG9QAevwWwJD9ahgG5K8sAlnBrroBcLRzAEu5UQO6nAKQDFAoQbnIHLNMA8fOIGfB6BUh/mnkCObXdA5Q5fU2oWVYAAAAASUVORK5CYII=" InformativeScreenshot="854d979571081bcd76890134d3666f6e.jpg" Selector="&lt;html app='chrome.exe' title='SHA1 online' /&gt;" Url="[in_Shaoneurl]" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>
